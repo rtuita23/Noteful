@@ -7,7 +7,7 @@ class Note < ActiveRecord::Base
   scope :sorted, lambda { order('created_at DESC') }
   
   def preview
-    self.content.slice(0..50) << "...(read more)"
+    self.content.slice(0..20) << "...(read more)"
   end
   
 end
